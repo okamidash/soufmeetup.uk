@@ -1,0 +1,23 @@
+---
+
+name: Birthdayn't
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  BirthdayOps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Birthday?
+        run: |
+          birthday='03/05'
+          now=$(date +'%d/%m')
+          if (( now == birthday )); then
+            echo "B'Op'."
+          else
+            echo 'Fuck off.'
+            exit 1
+          fi
