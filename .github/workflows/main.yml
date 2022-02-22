@@ -19,5 +19,4 @@ jobs:
             echo "B'Op'."
           else
             echo 'Fuck off.'
-            exit 1
           fi
