@@ -15,7 +15,7 @@ jobs:
         run: |
           birthday='03/05'
           now=$(date +'%d/%m')
-          if (( now == birthday )); then
+          if [[ "$now" == "$birthday" ]]; then
             echo "B'Op'."
           else
             echo 'Fuck off.'
